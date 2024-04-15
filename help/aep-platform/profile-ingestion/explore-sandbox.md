@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Cet article traite des sujets suivants :
 
-* Différences entre une organisation sandbox partenaire Exchange d’Adobe existante et l’environnement de test AEP partagé.
+* Différences entre une organisation sandbox de partenaire d’Adobe Exchange existante et l’environnement de test AEP partagé.
 * Demande d’accès à l’environnement de test partagé AEP.
 * Recevoir une invitation par courrier électronique à rejoindre l’environnement de test partagé AEP.
 * Invitation de nouveaux utilisateurs dans le [!DNL Admin Console].
@@ -23,11 +23,11 @@ Pour obtenir un aperçu général de la technologie Sandbox dans AEP, voir : [ar
 
 ## Environnement de test AEP partagé
 
-Les partenaires Exchange ont accès à divers Adobes. [!DNL Experience Cloud] produits (produits non AEP tels que [!DNL Analytics], [!DNL Target], balises Platform, etc.) via leur propre Adobe [!DNL Experience Cloud] Organisation (non partagée). Les partenaires disposent de droits d’accès d’administrateur système à leur propre organisation pour gérer les utilisateurs et d’autres autorisations. Adobe [!DNL Experience Platform] (AEP) est traité différemment des autres environnements de test Adobe. Voici les principales différences :
+Les partenaires d’Exchange ont accès à divers Adobes. [!DNL Experience Cloud] produits (produits non AEP tels que [!DNL Analytics], [!DNL Target], balises Platform, etc.) via leur propre Adobe [!DNL Experience Cloud] Organisation (non partagée). Les partenaires disposent de droits d’accès d’administrateur système à leur propre organisation pour gérer les utilisateurs et d’autres autorisations. Adobe [!DNL Experience Platform] (AEP) est traité différemment des autres environnements de test Adobe. Voici les principales différences :
 
 * L’accès à AEP ne sera PAS possible via l’Adobe principal des partenaires [!DNL Experience Cloud] organisation sandbox.
-* L’accès à AEP se fait par le biais d’une organisation d’échange d’Adobes partagée.
-* De nombreuses autres sociétés partenaires Adobe Exchange accèdent à AEP à l’aide de la même organisation
+* L’accès à AEP se fait par le biais d’une organisation d’Adobe Exchange partagée.
+* De nombreuses autres sociétés partenaires d’Adobe Exchange accèdent à AEP en utilisant la même organisation.
    * Par le biais de la fonction sandbox AEP, les données et les activités de cette organisation partagée ne peuvent pas être vues ni modifiées par les autres partenaires ; chaque partenaire aura accès à un sandbox différent au sein de l’organisation partagée.
 * Les droits d’administration au sein de cette organisation partagée sont très limités.
 * Une fois que vous avez accès à un environnement de test sur AEP, deux organisations s’affichent sur le sélecteur d’organisation en haut à droite de l’interface utilisateur lors de la consultation de la page d’accueil du Admin Console ou de l’Experience Cloud principal. Cependant, lorsque vous êtes connecté à AEP, seule l’organisation partagée doit être visible.
@@ -39,7 +39,7 @@ Envoyer un [demande d’assistance](https://adobeexchangeec.zendesk.com/hc/fr-fr
 * Adresse e-mail
 * Objet : Demande d’environnement de test AEP
 * Produit : configuration générale/sandbox
-* Type de ticket : support du programme - Forum aux questions sur le programme Exchange / la demande d’approvisionnement
+* Type de ticket : Programme d’assistance - Exchange Programme / questions de configuration
 * Description : fournissez une brève description du ou des cas pratiques d’intégration qui nécessitent l’utilisation d’un environnement de test AEP.
 * Veillez également à fournir tous les noms d’utilisateur et e-mails à ajouter à l’environnement de test AEP. Il est possible d’ajouter d’autres utilisateurs une fois la demande effectuée, mais les utilisateurs devront être ajoutés par Adobe via un ticket supplémentaire (voir ci-dessous).
 
@@ -56,7 +56,7 @@ Envoyer un [demande d’assistance](https://adobeexchangeec.zendesk.com/hc/fr-fr
 * Adresse électronique du demandeur
 * Objet : sandbox AEP - Ajouter un administrateur/utilisateur
 * Produit : configuration générale/sandbox
-* Type de ticket : support du programme - Forum aux questions sur le programme Exchange / la demande d’approvisionnement
+* Type de ticket : Programme d’assistance - Exchange Programme / questions de configuration
 * Description : Liste des utilisateurs à ajouter (noms et emails)
 
 ## Navigation dans l’interface utilisateur AEP

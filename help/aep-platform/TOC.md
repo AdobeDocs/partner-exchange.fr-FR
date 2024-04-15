@@ -4,7 +4,7 @@ product: experience cloud
 sub-product: partner exchange
 audience: partner
 user-guide-title: Adobe Exchange - Guides d’intégration
-user-guide-description: Guides d’intégration d’Adobe Exchange
+user-guide-description: Guides d’intégration Adobe Exchange
 source-git-commit: fe7519c35fb9155ce54cad85941c887f15881a38
 workflow-type: tm+mt
 source-wordcount: '43'
