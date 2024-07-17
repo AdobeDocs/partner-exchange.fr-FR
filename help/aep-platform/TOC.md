@@ -16,7 +16,7 @@ ht-degree: 0%
 # Adobe Exchange - Guides d’intégration {#integration-guides}
 
 + [Condition préalable de l’intégration AEP : accédez à l’environnement de test AEP et explorez-le.](profile-ingestion/explore-sandbox.md)
-+ Ingestion des données et accès aux profils {#profile-ingestion}
++ Ingestion des données et accès au profil {#profile-ingestion}
    + [Présentation du guide d’intégration](profile-ingestion/profile-integration-overview.md)
    + [Création de schémas et de jeux de données](profile-ingestion/schema-and-dataset.md)
    + [Importation de données par lot](profile-ingestion/batch-import.md)
