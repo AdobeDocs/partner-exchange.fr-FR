@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # Accès au profil unifié à l’aide de l’API Profile
 
-L’Adobe [!DNL Experience Platform] peut accéder au profil client en temps réel ; l’ [[!DNL Experience Platform]  API Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec ce profil. Consultez ce [tutoriel](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données de profil client en temps réel à l’aide de l’API Profile.
+L’Adobe [!DNL Experience Platform] peut accéder au profil client en temps réel ; l’ [[!DNL Experience Platform]  API Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec ce profil. Consultez ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données de profil client en temps réel à l’aide de l’API Profile.
 
 Cet article fera essentiellement référence au tutoriel ci-dessus.
 
@@ -49,7 +49,7 @@ Vous trouverez plus d’informations sur l’en-tête dans le [tutoriel](https:/
 
 ## Accès aux profils client en temps réel à l’aide d’identités
 
-L’API Profile permet d’accéder aux profils à l’aide d’une identité via une requête de GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/en/experience-platform/profile/api/entities.html).
+L’API Profile permet d’accéder aux profils à l’aide d’une identité via une requête de GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/entities.html).
 
 ### Accès aux données de profil à l’aide de l’identité
 
@@ -463,5 +463,5 @@ Une réponse réussie renvoie la page de résultats suivante. Cet exemple illust
 ## Articles de référence
 
 * [API Real-time Customer Profile](https://adobe.ly/2TtDHWr)
-* [Accès aux données de profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html)
+* [Accès aux données de profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html)
 * [[!DNL Experience Platform] Guide d’authentification](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
