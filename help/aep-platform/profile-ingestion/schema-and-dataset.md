@@ -39,7 +39,7 @@ Allez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalo
 
 ### Créer un jeu de données
 
-![ Création D’Un Jeu De Données Animé Gif](images/creating_a_dataset.gif)
+![&#x200B; Création D’Un Jeu De Données Animé Gif](images/creating_a_dataset.gif)
 
 <!-- 
 We don't yet support hover text in images (and we render it poorly when included). I removed "Creating a Dataset" from the above image link. We can add it back when we support it (Summer 2020?) -Bob

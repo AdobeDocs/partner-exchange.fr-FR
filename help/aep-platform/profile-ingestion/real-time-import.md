@@ -103,7 +103,7 @@ L’extension Launch Adobe [!DNL Experience Platform] permet d’accéder en con
 
 ## Articles de référence
 
-* [ API Data Ingestion ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/acpdr/swagger-specs)
+* [&#x200B; API Data Ingestion &#x200B;](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/acpdr/swagger-specs)
 * [Présentation de l’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/streaming_ingest_overview.md)
 * [Guide du développeur d’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/getting_started_with_platform_streaming_ingestion.md)
 * [Utilisation de l’extension Launch AEP](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
