@@ -2,58 +2,58 @@
 title: Accès au profil unifié
 description: Utilisez les API pour accéder au profil unifié.
 exl-id: c9d2fa2d-9ffe-4e66-996f-ad930bee22c6
-source-git-commit: fe7519c35fb9155ce54cad85941c887f15881a38
+source-git-commit: 0690a52c3be0981a626e49729e51cb1729816c87
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '683'
 ht-degree: 8%
 
 ---
 
-# Accès au profil unifié à l’aide de l’API Profile
+# Accéder au profil unifié à l’aide de l’API Profile
 
-L’Adobe [!DNL Experience Platform] peut accéder au profil client en temps réel ; l’ [[!DNL Experience Platform]  API Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec ce profil. Consultez ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données de profil client en temps réel à l’aide de l’API Profile.
+L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps réel. L’API [[!DNL Experience Platform] Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec celui-ci. Voir ce [tutoriel](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données du profil client en temps réel à l’aide de l’API Profile.
 
 Cet article fera essentiellement référence au tutoriel ci-dessus.
 
-La [collection Postman](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Vous trouverez plus d’informations sur l’installation et l’utilisation de la collection Postman sur la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md) . Il existe également des exemples de jeux de données [loyalty](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profile](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [Postman](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
-Pour cette section, utilisez le dossier Postman 5 : Recherche de profil, 5a : données de PROFIL de recherche en temps réel OU 5b : données d’ÉVÉNEMENT de recherche en temps réel.
+Pour cette section, utilisez le dossier Postman 5 : Recherche de profil, 5a : Données de profil de recherche en temps réel OU 5b : Données d’ÉVÉNEMENT de recherche en temps réel.
 
 ## Utilisation de l’API
 
 Les sections suivantes vous aident à vous authentifier auprès d’Experience Platform. Découvrez le chemin d’accès à l’API, les informations d’en-tête, etc.
 
-### Authentification à [!DNL Platform]
+### S’authentifier auprès de [!DNL Platform]
 
-Consultez le tutoriel d’authentification [this](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html) avant d’effectuer l’un des appels ci-dessous.
+Voir [ce](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html) tutoriel sur l’authentification avant d’effectuer l’un des appels ci-dessous.
 
-### Chemin de l’API
+### Chemin d’accès à l’API
 
-L’URL de la passerelle de plateforme nécessaire pour l’API de profil client en temps réel est : `https://platform.adobe.io/`
+L’URL de la passerelle de plateforme nécessaire à l’API de profil client en temps réel est la suivante : `https://platform.adobe.io/`
 
-Le chemin de base de l’API est : `/data/core/ups/access/entities`
+Le chemin d’accès de base de l’API est : `/data/core/ups/access/entities`.
 
-Exemple de chemin complet : `https://platform.adobe.io/data/core/ups/access/entities`
+Voici un exemple de chemin complet : `https://platform.adobe.io/data/core/ups/access/entities`
 
-### Informations d’en-tête
+### Informations sur l’en-tête
 
 L’en-tête doit inclure :
 
 * Autorisation
-* x-gw-ims-org-id - obtenir via console.adobe.io
-* x-api-key - obtenir via console.adobe.io
-* x-sandbox-name - obtenu à partir du gestionnaire d’intégration Adobe
+* x-gw-ims-org-id : à obtenir via console.adobe.io
+* x-api-key - à obtenir via console.adobe.io
+* x-sandbox-name : obtenu à partir d’Adobe Integration Manager
 * Content-Type: application/json
 
 Vous trouverez plus d’informations sur l’en-tête dans le [tutoriel](https://adobe.ly/2PTHuKv).
 
-## Accès aux profils client en temps réel à l’aide d’identités
+## Accès aux profils clients en temps réel à l’aide d’identités
 
-L’API Profile permet d’accéder aux profils à l’aide d’une identité via une requête de GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/entities.html).
+L’API Profile permet d’accéder aux profils à l’aide d’identités via une requête GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/en/experience-platform/profile/api/entities.html).
 
 ### Accès aux données de profil à l’aide de l’identité
 
-L’API donne accès aux informations de profil à l’aide de l’identité. Pour ce faire, effectuez une requête de GET à /access/entities avec l’ID d’entité comme l’un des paramètres et l’espace de noms de l’ID d’entité. REMARQUE : Gardez à l’esprit que toute requête qui renvoie 50 enregistrements ne diffusera qu’un état HTTP 422 et un message indiquant &quot;trop d’identités connexes&quot; et que la recherche devra être limitée avec davantage de paramètres.
+L’API donne accès aux informations de profil à l’aide de l’identité. Pour ce faire, envoyez une requête GET à /access/entities en indiquant l’ID de l’entité comme l’un des paramètres et l’espace de noms de l’ID d’entité. REMARQUE : gardez à l’esprit que toute requête qui renvoie 50 enregistrements ne fournit qu’un statut HTTP 422 et un message indiquant « trop d’identités associées » et que la recherche doit être réduite avec davantage de paramètres.
 
 Requête :
 
@@ -139,10 +139,10 @@ Réponse :
 
 ### Accès aux profils par liste d’identités
 
-L’API donne accès aux profils à l’aide d’une liste d’identités en utilisant une requête de POST au point de terminaison /access/entities et en fournissant les identités dans la payload. Ces identités se composent d’une valeur d’identifiant (entityId) et d’un espace de noms d’identité (entityIdNS).
+L’API donne accès aux profils à l’aide d’une liste d’identités en utilisant une requête POST au point d’entrée /access/entities et en fournissant les identités dans la payload. Ces identités se composent d’une valeur d’identifiant (entityId) et d’un espace de noms d’identité (entityIdNS).
 
 Requête :
-La requête suivante récupère les noms et adresses électroniques de plusieurs clients par une liste d’identités :
+La requête suivante récupère les noms et adresses e-mail de plusieurs clients par une liste d’identités :
 
 ```
 curl -X POST \
@@ -322,14 +322,14 @@ Une réponse réussie renvoie les champs demandés des entités spécifiées dan
 
 ## Événements de série temporelle
 
-Les partenaires peuvent accéder aux événements de série temporelle en fonction de l’identité de l’entité de profil associée en envoyant une requête GET au point de terminaison /access/entities .
+Les partenaires peuvent accéder aux événements de série temporelle en fonction de l’identité de l’entité de profil associée en envoyant une requête GET au point d’entrée /access/entities.
 
 ### Accès aux événements de série temporelle d’un profil par identité
 
-Les événements de série temporelle sont accessibles par l’identité de leur entité de profil associée en envoyant une requête GET au point de terminaison /access/entities . Cette identité se compose d’une valeur d’identifiant (entityId) et d’un espace de noms d’identité (entityIdNS).
+Les événements de série temporelle sont accessibles par l’identité de l’entité de profil associée en envoyant une requête GET au point d’entrée /access/entities. Cette identité se compose d’une valeur d’identifiant (entityId) et d’un espace de noms d’identité (entityIdNS).
 
 Requête :
-La requête suivante recherche une entité de profil par identifiant et récupère les valeurs des propriétés endUserIDs, web et channel **pour tous les événements de série temporelle** associés à l’entité.
+La requête suivante recherche une entité de profil par ID et récupère les valeurs des propriétés endUserIDs, web et channel **pour tous** les événements de série temporelle associés à l’entité.
 
 ```
 curl -X GET \
@@ -391,13 +391,13 @@ Une réponse réussie renvoie une liste paginée d’événements de série temp
 }
 ```
 
-### Pagination pour les événements de série temporelle d’un profil
+### Pagination des événements de série temporelle pour un profil
 
-Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe des pages de résultats ultérieures, le paramètre _page.next de la réponse contient un identifiant. En outre, le paramètre _links.next.href de la réponse fournit un URI de requête pour récupérer la page suivante.
+Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &amp;lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &amp;lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
 
 Requête :
 
-La requête suivante récupère la page de résultats suivante en utilisant l’URI _links.next.href comme chemin de requête.
+La requête suivante récupère la page de résultats suivante en utilisant l’URI _links.next.href comme chemin d’accès à la requête.
 
 ```
 curl -X GET \
@@ -411,7 +411,7 @@ curl -X GET \
 
 Réponse :
 
-Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse dans laquelle il n’existe aucune page de résultats suivante, comme indiqué par les valeurs de chaîne vides _page.next et _links.next.href.
+Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides &amp;lowbar;page.next et &amp;lowbar;links.next.href.
 
 ```
 {
@@ -463,5 +463,5 @@ Une réponse réussie renvoie la page de résultats suivante. Cet exemple illust
 ## Articles de référence
 
 * [API Real-time Customer Profile](https://adobe.ly/2TtDHWr)
-* [Accès aux données de profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html)
-* [[!DNL Experience Platform] Guide d’authentification](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
+* [Accédez aux données du profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html)
+* [[!DNL Experience Platform]  Guide d’authentification ](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
