@@ -393,7 +393,7 @@ Une réponse réussie renvoie une liste paginée d’événements de série temp
 
 ### Pagination des événements de série temporelle pour un profil
 
-Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &amp;lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &amp;lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
+Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
 
 Requête :
 
@@ -411,7 +411,7 @@ curl -X GET \
 
 Réponse :
 
-Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides &amp;lowbar;page.next et &amp;lowbar;links.next.href.
+Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides &lowbar;page.next et &lowbar;links.next.href.
 
 ```
 {
@@ -464,4 +464,4 @@ Une réponse réussie renvoie la page de résultats suivante. Cet exemple illust
 
 * [API Real-time Customer Profile](https://adobe.ly/2TtDHWr)
 * [Accédez aux données du profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html)
-* [[!DNL Experience Platform]  Guide d’authentification ](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
+* [[!DNL Experience Platform]  Guide d’authentification &#x200B;](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
