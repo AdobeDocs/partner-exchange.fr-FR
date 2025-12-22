@@ -9,4 +9,4 @@ ht-degree: 0%
 
 Ce référentiel a été migré de Git Corp vers GitHub Enterprise Cloud. Nouvel emplacement :
 
-<https://github.com/Adobe-Enterprise-Docs/partner-exchange.en>
+<https://github.com/Adobe-Enterprise-Docs/partner-exchange.fr-FR>
