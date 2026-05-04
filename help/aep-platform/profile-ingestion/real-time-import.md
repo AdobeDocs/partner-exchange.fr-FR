@@ -33,7 +33,7 @@ La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-
 
 Pour diffuser vers AEP, vous devez d’abord créer une connexion en continu. Les connexions en continu contiennent des attributs tels que la source des données en continu et si vous envoyez ou non des enregistrements appartenant aux schémas [!DNL Experience Data Model] (XDM). Après avoir créé une connexion en continu, vous recevez une URL unique que vous utilisez pour diffuser des données dans AEP.
 
-Accédez [ici](https://docs.adobe.com/content/help/en/experience-platform/ingestion/tutorials/create-streaming-connection.html) pour obtenir des instructions sur la création d’une connexion en continu via l’API ou [ici](https://docs.adobe.com/content/help/en/experience-platform/ingestion/tutorials/create-streaming-connection-ui.html) pour obtenir des instructions sur la création d’une connexion en continu via l’interface utilisateur.
+Accédez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection.html) pour obtenir des instructions sur la création d’une connexion en continu via l’API ou [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection-ui.html) pour obtenir des instructions sur la création d’une connexion en continu via l’interface utilisateur.
 
 ```json
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -76,7 +76,7 @@ Veillez à enregistrer l’identifiant fourni dans la réponse ci-dessus pour le
 
 Pour cette section, utilisez les dossiers d’appels Postman : 3 : importation en temps réel, 3a : importation en temps réel des données PROFILE.
 
-Les requêtes JSON détaillées avec des réponses pour les données de profil de diffusion en continu sont documentées [ici](https://docs.adobe.com/content/help/en/experience-platform/ingestion/tutorials/streaming-record-data.html).
+Les requêtes JSON détaillées avec des réponses pour les données de profil de diffusion en continu sont documentées [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-record-data.html).
 
 Étapes :
 
@@ -90,7 +90,7 @@ Les requêtes JSON détaillées avec des réponses pour les données de profil d
 
 Pour cette section, utilisez les dossiers d’appels Postman : 3 : importation en temps réel, 3b : importation en temps réel des données PROFILE.
 
-Les requêtes JSON détaillées avec des réponses pour les données d’expérience de diffusion sont documentées [ici](https://docs.adobe.com/content/help/en/experience-platform/ingestion/tutorials/streaming-time-series-data.html).
+Les requêtes JSON détaillées avec des réponses pour les données d’expérience de diffusion sont documentées [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-time-series-data.html).
 
 Étapes :
 
