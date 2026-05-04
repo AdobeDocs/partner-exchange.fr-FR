@@ -1,45 +1,50 @@
 ---
 title: Création de schémas et de jeux de données AEP
-description: Créez des schémas et des jeux de données dans Experience Platform.
+description: Création de schémas et de jeux de données dans Experience Platform.
 exl-id: a2773551-20a3-4a5b-ab53-60fa67e38ec0
-source-git-commit: fe7519c35fb9155ce54cad85941c887f15881a38
+TQID: https://experienceleague.adobe.com/uQtIQwCgsjOd5pR5w4LF634-Whvjl0jmF5WywVWlkZQ
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 20%
+source-wordcount: 617
+ht-degree: 25%
 
 ---
 
 # Création de schémas et de jeux de données
 
-La [collection Postman](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Vous trouverez plus d’informations sur l’installation et l’utilisation de la collection Postman sur la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md) . Il existe également des exemples de jeux de données [loyalty](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profile](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 ## Schémas
 
-Un schéma est un jeu de règles qui représente et valide la structure et le format des données. À un niveau élevé, les schémas fournissent une définition abstraite d’un objet du monde réel (une personne, par exemple) et indiquent les données à inclure dans chaque instance de cet objet (prénom, nom, anniversaire, etc.). Les schémas peuvent être créés dans l’interface utilisateur ou à l’aide des API [!DNL Experience Platform].
+Un schéma est un jeu de règles qui représente et valide la structure et le format des données. À un niveau élevé, les schémas fournissent une définition abstraite d’un objet du monde réel (une personne, par exemple) et indiquent les données à inclure dans chaque instance de cet objet (comme le prénom, le nom, l’anniversaire, etc.). Les schémas peuvent être créés dans l’interface utilisateur ou à l’aide des API [!DNL Experience Platform].
 
-Pour plus d’informations, voir [cette documentation](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/schema_composition.md) .
+Voir [cette documentation](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/schema_composition.md) pour plus d’informations.
 
 ### Créer un schéma
 
-Les partenaires peuvent créer un schéma à l’aide de l’interface utilisateur en suivant ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/tutorials/create-schema-ui.html). Cet exemple utilise le schéma de profil du programme de fidélité. Bien que l’exemple soit un schéma de profil, les schémas basés sur un événement peuvent être utilisés à l’aide d’un processus similaire.
+Les partenaires peuvent créer un schéma à l’aide de l’interface utilisateur en suivant ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/tutorials/create-schema-ui.html). Cet exemple utilise le schéma de profil du programme de fidélité . Bien que l’exemple soit un schéma de profil, les schémas basés sur un événement peuvent être utilisés à l’aide d’un processus similaire.
 
-Pour utiliser les API, les partenaires doivent avoir une intégration d’Adobe I/O existante avec les autorisations [!DNL Experience Platform] activées. Consultez ce guide pour [créer une intégration I/O](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html#!api-specification/markdown/narrative/tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md).
+Pour utiliser les API, les partenaires doivent disposer d’une intégration Adobe I/O existante avec les autorisations [!DNL Experience Platform] activées. Consultez ce guide pour [créer une intégration d’E/S](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html#!api-specification/markdown/narrative/tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md).
 
-Rendez-vous ensuite sur [ce lien](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/tutorials/create-schema-api.html) pour découvrir comment créer des schémas à l’aide de l’API.
+Rendez-vous ensuite sur [ce lien](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/tutorials/create-schema-api.html) pour savoir comment créer des schémas à l’aide de l’API.
 
-Pour créer un schéma via Postman, utilisez les appels contenus dans les dossiers 1 : Créer un schéma, 1a : Créer un schéma pour les données de PROFIL OU 1b : Créer un schéma pour les données d’ÉVÉNEMENT.
+Pour créer un schéma via Postman, utilisez les appels contenus dans les dossiers 1 : Créer un schéma, 1a : Créer un schéma pour les données PROFILE OU 1b : Créer un schéma pour les données EVENT.
 
 ## Jeux de données
 
-Toutes les données introduites dans l’Adobe [!DNL Experience Platform] sont contenues dans des jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
+Toutes les données introduites dans Adobe [!DNL Experience Platform] sont contenues dans des jeux de données. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
 
-Le service de catalogue est le système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform]. Il est utilisé pour créer et gérer des jeux de données. Le catalogue suit les métadonnées de chaque jeu de données, ce qui inclut une référence au schéma XDM (modèle de données d’expérience) auquel le jeu de données se conforme (expliqué dans la section suivante) et le nombre d’enregistrements ingérés par ce jeu de données.
+Le service de catalogue est le système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform]. Il est utilisé pour créer et gérer les jeux de données. Le catalogue suit les métadonnées de chaque jeu de données, ce qui inclut une référence au schéma XDM (modèle de données d’expérience) auquel le jeu de données se conforme (expliqué dans la section suivante) et le nombre d’enregistrements ingérés par ce jeu de données.
 
-Allez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/overview.html) pour un aperçu détaillé du jeu de données.
+Accédez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/overview.html) pour une présentation détaillée du jeu de données.
 
 ### Créer un jeu de données
 
-![&#x200B; Création D’Un Jeu De Données Animé Gif](images/creating_a_dataset.gif)
+![Création D’Un Gif Animé De Jeu De Données](images/creating_a_dataset.gif)
 
 <!-- 
 We don't yet support hover text in images (and we render it poorly when included). I removed "Creating a Dataset" from the above image link. We can add it back when we support it (Summer 2020?) -Bob
@@ -49,19 +54,19 @@ Créez un jeu de données via l’interface utilisateur :
 
 1. Cliquez sur **[!UICONTROL Créer un jeu de données]**.
 
-1. Cliquez sur **[!UICONTROL Créer à partir du schéma]**.
+1. Cliquez sur **[!UICONTROL Créer à partir d’un schéma]**.
 
 1. Cliquez sur **[!UICONTROL Terminer]**.
 
-Allez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/user-guide.html) pour consulter le guide d’utilisation d’un jeu de données.
+Accédez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/user-guide.html) pour obtenir un guide d’utilisation des jeux de données.
 
-[Créez un jeu de données à l’aide des API](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/create.html).
+[Créer un jeu de données à l’aide des API](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/datasets/create.html).
 
-Pour créer un jeu de données via Postman, utilisez les dossiers 2 : Créer un jeu de données, 2a : Créer un jeu de données pour les données PROFIL OU 2b : Créer un jeu de données pour les données EVENT.
+Pour créer un jeu de données via Postman, utilisez les dossiers 2 : Créer un jeu de données, 2a : Créer un jeu de données pour les données PROFILE OU 2b : Créer un jeu de données pour les données EVENT.
 
 ## Bonnes pratiques relatives aux schémas et aux jeux de données pour les partenaires
 
-* Les données du partenaire doivent utiliser un schéma de profil distinct et créer un mixin pour le schéma de profil et d’expérience existants d’un client.
-* Si possible, les partenaires doivent utiliser des classes d’Adobe et des mixins.
+* Les données de partenaire doivent utiliser un schéma de profil distinct plutôt que de créer un mixin pour le schéma de profil et le schéma d’expérience existants d’un client.
+* Dans la mesure du possible, les partenaires doivent utiliser les classes et les mixins d’Adobe.
 * Les partenaires doivent charger leurs données à l’aide d’un jeu de données distinct au lieu d’essayer de combiner leurs données dans un jeu de données existant.
 * Les partenaires ne peuvent pas charger leurs schémas dans le registre global pour l’instant.

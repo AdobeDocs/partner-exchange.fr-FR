@@ -1,27 +1,29 @@
 ---
 cloud: Experience Cloud
 solution: Experience Cloud
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
 type: Documentation
 git-repo: https://github.com/AdobeDocs/partner-exchange.fr-FR
 index: false
-source-git-commit: 1285dba53d3ae0c43c8993728c5f8bc5af7546e2
+source-git-commit: 028e091ec221dad81046ae380f4a19d8f874f767
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 0%
+source-wordcount: 125
+ht-degree: 96%
 
 ---
 
 
 # Métadonnées à usage interne
 
-Le fichier metadata.md comprend des métadonnées au niveau du référentiel qui sont transmises aux fichiers TOC.md du guide de l’utilisateur dans le référentiel. Si vous souhaitez modifier du contenu metadata.md pour n’importe quel guide de l’utilisateur, effectuez vos modifications dans n’importe quel fichier TOC.md.
+Le fichier metadata.md inclut des métadonnées au niveau du référentiel qui sont transmises aux fichiers TOC.md du guide utilisateur dans le référentiel. Si vous souhaitez modifier le contenu de metadata.md pour un guide utilisateur, faites-le dans n’importe quel fichier TOC.md.
 
-| métadonnées | ce qu&#39;il fait |
+| métadonnées | son fonctionnement |
 |--- |--- |
 | solution-title | Utilisé dans l’en-tête de l’article comme lien |
 | solution-hub-url | Ouvre la page hub d’aide |
 | solution-icon | Affiche l’icône de la solution en regard du titre de la solution. Pas encore implémenté |
-| getting-started-url | Lien vers la page de prise en main |
-| tutorials-url | Lien vers des tutoriels vidéo : tutoriels d’aide ou tutoriels d’AC. |
-| niveaux de mini-table des matières | Détermine le nombre de niveaux de titre qui apparaissent dans le rail de droite. la valeur par défaut est 2 |
-| git-repo | Spécifie l&#39;emplacement du référentiel principal pour une utilisation interne |
+| getting-started-url | Lien vers la page de prise en main de l’aide |
+| tutorials-url | Lien vers des tutoriels vidéo : tutoriels d’assistance ou tutoriels KT |
+| mini-toc-levels | Détermine le nombre de niveaux de titre qui apparaissent dans le rail de droite. la valeur par défaut est 2 |
+| git-repo | Spécifie l’emplacement du référentiel principal pour une utilisation interne |

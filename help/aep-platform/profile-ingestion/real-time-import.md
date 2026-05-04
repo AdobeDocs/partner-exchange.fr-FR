@@ -1,36 +1,39 @@
 ---
-title: Importation en temps réel
+title: Import en temps réel
 description: Découvrez comment importer des données dans AEP en temps réel.
 exl-id: 0b6215a9-1160-49ae-8aa5-302b47357200
-source-git-commit: fe7519c35fb9155ce54cad85941c887f15881a38
+TQID: https://experienceleague.adobe.com/GvWcwNPjQdmdKSUkwvJ2EpoCKJHGvf5c1Kn4dwWRVi8
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 2%
+source-wordcount: 642
+ht-degree: 9%
 
 ---
 
-# Diffusion de données en continu vers AEP
+# Diffusion de données vers AEP
 
-L&#39;Adobe [!DNL Experience Platform] permet de diffuser en continu des événements de profil et d&#39;expérience et de les rendre disponibles en temps quasi réel. Toutes les données envoyées à AEP par flux sont conservées dans le lac de données. Les données peuvent être diffusées en continu vers des jeux de données existants ou des jeux de données entièrement nouveaux via des API ou à l’aide d’Adobe Launch.
+Adobe [!DNL Experience Platform] permet la diffusion en continu et la disponibilité d’événements de profil et d’expérience en temps quasi réel. Toutes les données envoyées à AEP par le biais de la diffusion en continu sont conservées dans le lac de données. Les données peuvent être diffusées en continu vers des jeux de données existants ou vers des jeux de données entièrement nouveaux via des API ou à l’aide d’Adobe Launch.
 
-Cet article traite des sujets suivants :
+Cet article couvre les sujets suivants :
 
 * Diffusion en continu vers XDM Individual Profile
 * Diffusion en continu vers XDM ExperienceEvent
-* Utilisation de l’extension Launch pour la diffusion
+* Utilisation d’AEP l’extension Launch pour diffuser
 
-La [collection Postman](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Vous trouverez plus d’informations sur l’installation et l’utilisation de la collection Postman sur la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md) . Il existe également des exemples de jeux de données [loyalty](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profile](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 ## Conditions préalables
 
-* [Authentifiez-vous à la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html).
-* Rassemblez les valeurs des en-têtes requis à partir du tutoriel sur l’authentification lié ci-dessus.
+* [S’authentifier sur la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html).
+* Rassemblez les valeurs des en-têtes requis à partir du tutoriel sur l’authentification ci-dessus.
 
 ## Création d’une connexion en continu
 
-Pour diffuser vers AEP, vous devez d’abord créer une connexion en continu. Les connexions en flux continu contiennent des attributs tels que la source des données en flux continu et si vous envoyez ou non des enregistrements appartenant aux schémas [!DNL Experience Data Model] (XDM). Après avoir créé une connexion en continu, vous recevez une URL unique que vous utilisez pour diffuser des données dans AEP.
+Pour diffuser vers AEP, vous devez d’abord créer une connexion en continu. Les connexions en continu contiennent des attributs tels que la source des données en continu et si vous envoyez ou non des enregistrements appartenant aux schémas [!DNL Experience Data Model] (XDM). Après avoir créé une connexion en continu, vous recevez une URL unique que vous utilisez pour diffuser des données dans AEP.
 
-Allez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection.html) pour obtenir des instructions sur la création d’une connexion en continu via l’API ou [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection-ui.html) pour obtenir des instructions sur la création d’une connexion en continu via l’interface utilisateur.
+Accédez [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection.html) pour obtenir des instructions sur la création d’une connexion en continu via l’API ou [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/create-streaming-connection-ui.html) pour obtenir des instructions sur la création d’une connexion en continu via l’interface utilisateur.
 
 ```json
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -67,43 +70,43 @@ Réponse :
 }
 ```
 
-Veillez à enregistrer l’identifiant fourni dans la réponse ci-dessus pour les futurs appels d’ingestion par flux (la collection Postman l’enregistrera pour vous dans la variable d’environnement CONNECTION_ID).
+Veillez à enregistrer l’identifiant fourni dans la réponse ci-dessus pour les appels d’ingestion en flux continu futurs (la collection Postman l’enregistrera pour vous dans la variable d’environnement CONNECTION_ID).
 
 ## Diffusion des données de profil vers AEP
 
-Pour cette section, utilisez les dossiers d’appels Postman : 3: Import en temps réel, 3a: Import en temps réel pour les données PROFILE.
+Pour cette section, utilisez les dossiers d’appels Postman : 3 : importation en temps réel, 3a : importation en temps réel des données PROFILE.
 
-Les demandes JSON détaillées avec des réponses pour la diffusion en continu de données de profil sont [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-record-data.html).
-
-Étapes :
-
-1. Création d’un schéma XDM Individual Profile
-1. Définition du descripteur d’identité de Principal pour XDM Individual Profile (clé primaire)
-1. Création d’un jeu de données pour les enregistrements XDM Individual Profile
-1. Appel des API d’ingestion en flux continu pour créer un enregistrement XDM Individual Profile
-1. Récupération du profil nouvellement créé
-
-## Diffusion en continu des événements d’expérience vers AEP
-
-Pour cette section, utilisez les dossiers d’appels Postman : 3 : import en temps réel, 3b : import en temps réel pour les données PROFILE.
-
-Les demandes JSON détaillées avec des réponses pour les données d’expérience de diffusion en continu sont [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-time-series-data.html).
+Les requêtes JSON détaillées avec des réponses pour les données de profil de diffusion en continu sont documentées [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-record-data.html).
 
 Étapes :
 
-1. Création d’un schéma ExperienceEvent XDM
-1. Définition du descripteur d’identité de Principal pour XDM ExperienceEvent (clé primaire)
-1. Création d’un jeu de données pour XDM ExperienceEvents
-1. Appel des API d’ingestion en flux continu pour créer un événement XDM ExperienceEvent
-1. Récupération de l’événement nouvellement créé
+1. Création d’un schéma de profil individuel XDM
+1. Définir le descripteur d’identité de Principal pour XDM Individual Profile (clé primaire)
+1. Créer un jeu de données pour les enregistrements de profils individuels XDM
+1. Appelez les API d’ingestion en flux continu pour créer un enregistrement de profil individuel XDM
+1. Récupérer le profil nouvellement créé
 
-## Utiliser des balises Experience Platform pour diffuser sur AEP
+## Diffusion d’événements d’expérience vers AEP
 
-L’extension Launch Adobe [!DNL Experience Platform] permet d’accéder en continu à AEP via Launch. Pour en savoir plus, consultez [ce guide](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html).
+Pour cette section, utilisez les dossiers d’appels Postman : 3 : importation en temps réel, 3b : importation en temps réel des données PROFILE.
+
+Les requêtes JSON détaillées avec des réponses pour les données d’expérience de diffusion sont documentées [ici](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/tutorials/streaming-time-series-data.html).
+
+Étapes :
+
+1. Création d’un schéma XDM ExperienceEvent
+1. Définissez le descripteur d’identité de Principal pour XDM ExperienceEvent (clé primaire)
+1. Créer un jeu de données pour XDM ExperienceEvents
+1. Appelez les API d’ingestion en flux continu pour créer un événement d’expérience XDM
+1. Récupérer l’événement nouvellement créé
+
+## Utiliser les balises Experience Platform pour diffuser vers AEP
+
+L’extension Adobe [!DNL Experience Platform] Launch permet d’accéder à AEP en flux continu via Launch. Pour en savoir plus, consultez [ce guide](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html).
 
 ## Articles de référence
 
-* [&#x200B; API Data Ingestion &#x200B;](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/acpdr/swagger-specs)
-* [Présentation de l’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/streaming_ingest_overview.md)
-* [Guide du développeur d’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/getting_started_with_platform_streaming_ingestion.md)
-* [Utilisation de l’extension Launch AEP](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+* [API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/acpdr/swagger-specs)
+* [Vue d’ensemble de l’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/streaming_ingest_overview.md)
+* [Guide de développement de l’ingestion en flux continu](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/streaming_ingest/getting_started_with_platform_streaming_ingestion.md)
+* [Utilisation de l’extension AEP Launch](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)

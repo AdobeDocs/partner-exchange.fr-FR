@@ -2,9 +2,14 @@
 title: Accès au profil unifié
 description: Utilisez les API pour accéder au profil unifié.
 exl-id: c9d2fa2d-9ffe-4e66-996f-ad930bee22c6
-source-git-commit: 0690a52c3be0981a626e49729e51cb1729816c87
+TQID: https://experienceleague.adobe.com/ECndsmKpnN3No-PYL0kq0lktWuDK4Z6lFb99i82dK7k
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+topic_v2:
+  - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
+source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: 797
 ht-degree: 8%
 
 ---
@@ -15,7 +20,7 @@ L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps ré
 
 Cet article fera essentiellement référence au tutoriel ci-dessus.
 
-La collection [Postman](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 Pour cette section, utilisez le dossier Postman 5 : Recherche de profil, 5a : Données de profil de recherche en temps réel OU 5b : Données d’ÉVÉNEMENT de recherche en temps réel.
 
@@ -411,7 +416,7 @@ curl -X GET \
 
 Réponse :
 
-Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides &lowbar;page.next et &lowbar;links.next.href.
+Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides de &lowbar;page.next et &lowbar;links.next.href.
 
 ```
 {
@@ -463,5 +468,5 @@ Une réponse réussie renvoie la page de résultats suivante. Cet exemple illust
 ## Articles de référence
 
 * [API Real-time Customer Profile](https://adobe.ly/2TtDHWr)
-* [Accédez aux données du profil client en temps réel à l’aide du tutoriel de l’API Profile](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html)
-* [[!DNL Experience Platform]  Guide d’authentification &#x200B;](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
+* [Accédez aux données du profil client en temps réel à l’aide du tutoriel sur l’API Profile](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html)
+* [Guide d’authentification [!DNL Experience Platform]](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)
