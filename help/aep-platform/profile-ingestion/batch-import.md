@@ -3,8 +3,10 @@ title: Importer des données par lot dans AEP
 description: Découvrez comment importer des fichiers par lots dans Experience Platform
 exl-id: 50576b67-b3ba-498e-86f6-7e1986b76985
 TQID: https://experienceleague.adobe.com/sJjuydUOIwlu4gv6qmokidQJVrYLN4--M8m3DTkcjf0
-product_v2: id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
 workflow-type: tm+mt
 source-wordcount: 646
@@ -26,7 +28,7 @@ Cet article couvre les sujets suivants :
 * Procédure d’exécution d’un lot
 * Comment vérifier l’état d’un lot
 
-La collection [](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 Pour tous les appels de ce tutoriel, utilisez les dossiers d’appels Postman : 4 : importation par lots, 4a : importation par lots pour les données PROFILE OU 4b : importation par lots pour les données EVENT.
 
@@ -41,13 +43,13 @@ Pour tous les appels de ce tutoriel, utilisez les dossiers d’appels Postman : 
 
 * Taille maximale du lot : 100 Go
 * Nombre maximal de fichiers par lot : 1 500
-* Si un fichier est plus volumineux que 512MB, il doit être divisé en blocs plus petits. Pour plus d’informations, consultez le [ guide du développement ](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/ingest_architectural_overview/batch_data_ingestion_developer_guide.md)
+* Si un fichier est plus volumineux que 512MB, il doit être divisé en blocs plus petits. Pour plus d’informations, consultez le [&#x200B; guide du développement &#x200B;](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/ingest_architectural_overview/batch_data_ingestion_developer_guide.md)
 * Nombre maximal de propriétés ou de champs par ligne : 10 000
 * Nombre maximal de lots par minute, par utilisateur : 138
 
 ## Création d’un lot
 
-Dans ce tutoriel, nous utiliserons le format JSON. Vous trouverez plus d’exemples de formats dans le guide de développement du [](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/ingest_architectural_overview/batch_data_ingestion_developer_guide.md)
+Dans ce tutoriel, nous utiliserons le format JSON. Vous trouverez plus d’exemples de formats dans le guide de développement du [&#128279;](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/ingest_architectural_overview/batch_data_ingestion_developer_guide.md)
 Créez un lot en utilisant le format JSON comme format d’entrée (veillez à inclure un identifiant de jeu de données et à ce que vos données soient conformes au schéma XDM lié au jeu de données) :
 
 ```json
