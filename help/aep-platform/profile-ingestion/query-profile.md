@@ -327,7 +327,7 @@ Une réponse réussie renvoie les champs demandés des entités spécifiées dan
 
 ## Événements de série temporelle
 
-Les partenaires peuvent accéder aux événements de série temporelle en fonction de l’identité de l’entité de profil associée en envoyant une requête GET au point d’entrée /access/entities.
+Les partenaires peuvent accéder aux événements de série temporelle en fonction de l’identité de l’entité de profil associée en adressant une requête GET au point d’entrée /access/entities.
 
 ### Accès aux événements de série temporelle d’un profil par identité
 
