@@ -73,7 +73,7 @@ Envoyez une [demande d’assistance](https://adobeexchangeec.zendesk.com/hc/fr-f
 
 ## Naviguer dans l’interface utilisateur d’AEP
 
-Regardez l’interface utilisateur d’AEP [vidéo d’introduction](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/interface-tour.html)
+Regardez l’interface utilisateur d’AEP [vidéo d’introduction](https://docs.adobe.com/content/help/fr-FR/platform-learn/tutorials/intro-to-platform/interface-tour.html)
 
 Il existe 12 zones principales de l’interface utilisateur d’AEP que vous pouvez parcourir à partir du panneau de gauche. Toutefois, les sections les plus importantes pour ce type d’intégration sont les schémas, les jeux de données et les profils.
 
