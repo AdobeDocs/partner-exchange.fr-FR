@@ -5,22 +5,22 @@ exl-id: c9d2fa2d-9ffe-4e66-996f-ad930bee22c6
 TQID: https://experienceleague.adobe.com/ECndsmKpnN3No-PYL0kq0lktWuDK4Z6lFb99i82dK7k
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
+    internal-label: Customer profiles
+source-git-commit: 3cfb1b99df78991b22d2a3fd0e3d3be822422acc
 workflow-type: tm+mt
-source-wordcount: 797
+source-wordcount: '797'
 ht-degree: 8%
-
 ---
-
 # Accéder au profil unifié à l’aide de l’API Profile
 
-L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps réel. L’API [[!DNL Experience Platform] Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec celui-ci. Voir ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données du profil client en temps réel à l’aide de l’API Profile.
+L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps réel. L’API [[!DNL Experience Platform] Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec celui-ci. Voir ce [tutoriel](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données du profil client en temps réel à l’aide de l’API Profile.
 
 Cet article fera essentiellement référence au tutoriel ci-dessus.
 
-La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 Pour cette section, utilisez le dossier Postman 5 : Recherche de profil, 5a : Données de profil de recherche en temps réel OU 5b : Données d’ÉVÉNEMENT de recherche en temps réel.
 
@@ -54,7 +54,7 @@ Vous trouverez plus d’informations sur l’en-tête dans le [tutoriel](https:/
 
 ## Accès aux profils clients en temps réel à l’aide d’identités
 
-L’API Profile permet d’accéder aux profils à l’aide d’identités via une requête GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/entities.html).
+L’API Profile permet d’accéder aux profils à l’aide d’identités via une requête GET. Les sections ci-dessous suivront ce [guide](https://docs.adobe.com/content/help/en/experience-platform/profile/api/entities.html).
 
 ### Accès aux données de profil à l’aide de l’identité
 
@@ -398,7 +398,7 @@ Une réponse réussie renvoie une liste paginée d’événements de série temp
 
 ### Pagination des événements de série temporelle pour un profil
 
-Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
+Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &amp;lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &amp;lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
 
 Requête :
 
@@ -416,7 +416,7 @@ curl -X GET \
 
 Réponse :
 
-Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides de &lowbar;page.next et &lowbar;links.next.href.
+Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides de &amp;lowbar;page.next et &amp;lowbar;links.next.href.
 
 ```
 {
@@ -468,5 +468,5 @@ Une réponse réussie renvoie la page de résultats suivante. Cet exemple illust
 ## Articles de référence
 
 * [API Real-time Customer Profile](https://adobe.ly/2TtDHWr)
-* [Accédez aux données du profil client en temps réel à l’aide du tutoriel sur l’API Profile](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html)
+* [Accédez aux données du profil client en temps réel à l’aide du tutoriel sur l’API Profile](https://docs.adobe.com/content/help/en/experience-platform/profile/api/getting-started.html)
 * [Guide d’authentification [!DNL Experience Platform]](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/authentication.html)

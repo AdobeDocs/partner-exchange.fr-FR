@@ -1,25 +1,26 @@
 ---
 title: Aperçu du guide d’intégration de l’ingestion et de l’accès au profil [!DNL Platform]
-description: Découvrez l’intégration pour l [!DNL Experience Platform] ingestion et l’accès aux profils.
+description: Découvrez l’intégration pour l’ingestion et l’accès aux profils [!DNL Experience Platform].
 exl-id: a593511c-dd4c-4437-af73-f44d795cacb8
 TQID: https://experienceleague.adobe.com/whnqurJyM4QXl5ikRvez7hpKWRDuU4onzROsUk-WeSI
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
+    internal-label: Insights
+source-git-commit: 3cfb1b99df78991b22d2a3fd0e3d3be822422acc
 workflow-type: tm+mt
-source-wordcount: 492
+source-wordcount: '493'
 ht-degree: 3%
-
 ---
-
 # Guide d’intégration : ingestion et accès aux profils [!DNL Experience Platform]
 
 Les partenaires doivent utiliser ce guide d’intégration pour les aider à créer des fonctionnalités d’entrée et de sortie avec Adobe [!DNL Experience Platform] (AEP). Il existe des API pour l’ingestion par lots, l’ingestion par flux et l’accès au profil unifié (sortie).
 
-Pour faciliter le développement, une collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) a été créée par l’équipe Adobe Exchange. Cette collection Postman est référencée tout au long du guide d’intégration.
+Pour faciliter le développement, une collection [](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) a été créée par l’équipe Adobe Exchange. Cette collection Postman est référencée tout au long du guide d’intégration.
 
 Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
