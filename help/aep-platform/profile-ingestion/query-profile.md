@@ -20,7 +20,7 @@ L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps ré
 
 Cet article fera essentiellement référence au tutoriel ci-dessus.
 
-La collection [](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
+La collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) est référencée tout au long de l’article à l’aide des appels associés par numéro. Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
 Pour cette section, utilisez le dossier Postman 5 : Recherche de profil, 5a : Données de profil de recherche en temps réel OU 5b : Données d’ÉVÉNEMENT de recherche en temps réel.
 
@@ -398,7 +398,7 @@ Une réponse réussie renvoie une liste paginée d’événements de série temp
 
 ### Pagination des événements de série temporelle pour un profil
 
-Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &amp;lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &amp;lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
+Les résultats sont paginés lors de la récupération des événements de série temporelle. S’il existe d’autres pages de résultats, le paramètre &lowbar;page.next de la réponse contiendra un identifiant. En outre, le paramètre &lowbar;links.next.href de la réponse fournit une URI de requête pour récupérer la page suivante.
 
 Requête :
 
@@ -416,7 +416,7 @@ curl -X GET \
 
 Réponse :
 
-Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides de &amp;lowbar;page.next et &amp;lowbar;links.next.href.
+Une réponse réussie renvoie la page de résultats suivante. Cet exemple illustre une réponse où il n’y a pas de pages de résultats suivantes, comme indiqué par les valeurs de chaîne vides de &lowbar;page.next et &lowbar;links.next.href.
 
 ```
 {

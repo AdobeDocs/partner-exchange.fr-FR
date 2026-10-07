@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Les partenaires doivent utiliser ce guide d’intégration pour les aider à créer des fonctionnalités d’entrée et de sortie avec Adobe [!DNL Experience Platform] (AEP). Il existe des API pour l’ingestion par lots, l’ingestion par flux et l’accès au profil unifié (sortie).
 
-Pour faciliter le développement, une collection [](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) a été créée par l’équipe Adobe Exchange. Cette collection Postman est référencée tout au long du guide d’intégration.
+Pour faciliter le développement, une collection [&#128279;](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman) a été créée par l’équipe Adobe Exchange. Cette collection Postman est référencée tout au long du guide d’intégration.
 
 Pour plus d’informations sur l’installation et l’utilisation de la collection Postman, consultez la page Github [README](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/README.md). Il existe également des exemples de jeux de données de données [fidélité](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20events.json) et [profil](https://github.com/Adobe-Marketing-Cloud/exchange-aep-profile-integration-postman/blob/master/AEP%20loyalty%20profiles.json).
 
