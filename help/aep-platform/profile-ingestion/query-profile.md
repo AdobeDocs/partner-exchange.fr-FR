@@ -5,15 +5,15 @@ exl-id: c9d2fa2d-9ffe-4e66-996f-ad930bee22c6
 TQID: https://experienceleague.adobe.com/ECndsmKpnN3No-PYL0kq0lktWuDK4Z6lFb99i82dK7k
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
+    internal-label: CX Enterprise
 topic_v2:
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
+    internal-label: Customer profiles
+source-git-commit: 3cfb1b99df78991b22d2a3fd0e3d3be822422acc
 workflow-type: tm+mt
-source-wordcount: 797
+source-wordcount: '797'
 ht-degree: 8%
-
 ---
-
 # Accéder au profil unifié à l’aide de l’API Profile
 
 L’[!DNL Experience Platform] Adobe peut accéder au profil client en temps réel. L’API [[!DNL Experience Platform] Real-time Customer Profile](https://adobe.ly/2TtDHWr) a été conçue pour interagir avec celui-ci. Voir ce [tutoriel](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/api/getting-started.html) pour savoir comment accéder aux données du profil client en temps réel à l’aide de l’API Profile.

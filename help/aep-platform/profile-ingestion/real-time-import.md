@@ -5,13 +5,12 @@ exl-id: 0b6215a9-1160-49ae-8aa5-302b47357200
 TQID: https://experienceleague.adobe.com/GvWcwNPjQdmdKSUkwvJ2EpoCKJHGvf5c1Kn4dwWRVi8
 product_v2:
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
-source-git-commit: 6698ae880d1ad13a9387cb1ba66b9ba152d1d407
+    internal-label: CX Enterprise
+source-git-commit: 3cfb1b99df78991b22d2a3fd0e3d3be822422acc
 workflow-type: tm+mt
-source-wordcount: 642
+source-wordcount: '642'
 ht-degree: 9%
-
 ---
-
 # Diffusion de données vers AEP
 
 Adobe [!DNL Experience Platform] permet la diffusion en continu et la disponibilité d’événements de profil et d’expérience en temps quasi réel. Toutes les données envoyées à AEP par le biais de la diffusion en continu sont conservées dans le lac de données. Les données peuvent être diffusées en continu vers des jeux de données existants ou vers des jeux de données entièrement nouveaux via des API ou à l’aide d’Adobe Launch.
